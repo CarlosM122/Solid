@@ -44,10 +44,16 @@ public class FuncionMenores extends Sala implements IClasificarFuncion {
     }
 
     @Override
-    public void agregarAlista() {
-        if(getEdadMinima()==0){
-            getFuncionMenores().add(titulo);
-        }
+    public String toString() {
+        return "FuncionMenores{" +
+                "titulo='" + titulo + '\'' +
+                ", genero='" + genero + '\'' +
+                ", edadMinima=" + edadMinima +
+                '}';
+    }
 
+    @Override
+    public void agregarAlista() {
+            getFuncionMenores().add(toString());
     }
 }
